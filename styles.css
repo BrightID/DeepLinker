@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Poppins"; /*a name to be used later*/
+  src: url("fonts/Poppins-Regular.ttf"); /*URL to font*/
+}
+
+body {
+  background: #f7c4b0;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #f7c4b0;
+  flex: 1 1;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.info-text {
+  font-family: "Poppins";
+  font-size: 16px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.help-text {
+  font-family: "Poppins";
+  font-size: 14px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bottom-app-container {
+}
+
+.download-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-link {
+  margin-top: 50px;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  .android {
+    display: none;
+  }
+}
+
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+  .ios {
+    display: none;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>BrightID Deep Link</title>
+    <meta name="description" content="Helps provide deep links for BrightID" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <p class="info-text">This url was supposed to open the BrightID app</p>
+      <p class="info-text">
+        Try this link to open BrightID:
+      </p>
+      <a class="info-text" id="deeplink" target="_blank" href=""></a>
+      <p class="info-text">OR</p>
+      <p class="help-text ios">
+        If you are using iOS, drag this page down then press OPEN
+      </p>
+      <p class="help-text android">
+        If you are using Android, make sure that
+        <a id="androidDeepLink" href="" target="_blank"></a> is configured to
+        open BrightID
+      </p>
+    </div>
+    <div class="bottom-app-container">
+      <div class="download-links-container">
+        <a
+          href="https://apps.apple.com/us/app/brightid/id1428946820"
+          target="_blank"
+          class="download-link ios"
+        >
+          <image src="images/app_store.svg" alt="app store"
+        /></a>
+        <a
+          href="https://play.google.com/store/apps/details?id=org.brightid"
+          target="_blank"
+          class="download-link android"
+        >
+          <image
+            width="154px"
+            src="images/google-play-badge.png"
+            alt="play store"
+        /></a>
+      </div>
+    </div>
+    <script>
+      var url = window.location.href;
+      var brightIdUrl = url.replace("https://app.brightid.org/", "brightid://");
+      var deeplink = document.getElementById("deeplink");
+      deeplink.href = brightIdUrl;
+      deeplink.innerHTML = brightIdUrl;
+      androidDeepLink.href = url;
+      androidDeepLink.innerHTML = url;
+    </script>
+  </body>
+</html>
